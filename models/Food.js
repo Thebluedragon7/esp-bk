@@ -7,6 +7,10 @@ const foodSchema = new Schema({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+    required: true,
+  },
   items: [
     {
       name: String,

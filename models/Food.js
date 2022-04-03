@@ -7,14 +7,11 @@ const foodSchema = new Schema({
     type: String,
     required: true,
   },
-  image: {
-    type: String,
-    required: true,
-  },
   items: [
     {
       name: String,
       isPlated: Boolean,
+      image: String,
       price: Number,
     },
   ],

@@ -4,7 +4,7 @@ const getFoods = async (req, res, next) => {
   let foods = await Food.find();
   if (!foods) {
     return res.status(404).json({
-      message: "No Items Available!",
+      message: "No Foods Available!",
     });
   }
   res.status(200).json({ foods });
@@ -20,7 +20,7 @@ const addFoods = async (req, res, next) => {
 
   if (!foods) {
     return res.status(500).json({
-      message: "Cannot Add the Item",
+      message: "Cannot Save the food",
     });
     next();
   }
@@ -34,7 +34,7 @@ const getFoodById = async (req, res, next) => {
   let food = await Food.findById(foodID);
   if (!food) {
     res.status(404).json({
-      message: `No category with id: ${foodID} was found`,
+      message: `No food with id: ${foodID} was found`,
     });
   }
 
